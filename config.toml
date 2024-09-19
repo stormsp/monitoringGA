@@ -1,0 +1,59 @@
+Namespace = "ГИС 4"
+Comment = "ГИС 4 С КРАНАМИ"
+Version = "0.0.0.10"
+IpDevice = "192.168.1.104"
+Station_ASDU = 1
+Upport_tcp = 5502
+Local_port = 17000
+Count_tty_serial = 2
+Count_tcp_serial = 1
+DeadZone = 25
+Delta = 1
+
+[[IEC101]]
+  IdPU = 1
+  Comment = "Имя"
+  Tty_port = "/dev/ttyCH343USB1"
+  Baud = 9600
+  Stop_bit = 1
+  Count_bit = 8
+  Time_loop = 3000
+  Parity = "N"
+  Diagnostic = 5
+
+[[IEC104]]
+  IdPU = 2
+  Comment = "ПО (УСПД)"
+  Tcp_port = 2405
+  Ip_address = "192.168.1.104"
+  Diagnostic = 99998
+
+[[Modbus]]
+  Comment = "МКЗА1"
+  Port_tty = "/dev/ttyCH343USB1"
+  Time_loop = 300
+  IP_adress = ""
+  Port = ""
+  Mode = "RTU"
+  Baud = 57600
+  Parity = "N"
+  Diagnostic = 0
+  Stop = 1
+  Bits = 8
+  Address_id = 202
+
+[[Modbus]]
+  Comment = "МКЗА2"
+  Port_tty = "/dev/ttyCH343USB2"
+  Time_loop = 300
+  IP_adress = ""
+  Port = ""
+  Mode = "RTU"
+  Baud = 57600
+  Parity = "N"
+  Diagnostic = 0
+  Stop = 1
+  Bits = 8
+  Address_id = 202
+
+  
